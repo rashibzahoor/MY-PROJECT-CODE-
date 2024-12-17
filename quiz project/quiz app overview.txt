@@ -1,0 +1,5 @@
+This project is a dynamic quiz app built using React, along with HTML, CSS, and JavaScript. The app presents a series of 10 multiple-choice questions, each with four answer options. If the user selects the wrong option, it turns red, and if the answer is correct, it turns green, providing immediate feedback.
+
+Once all 10 questions are answered, the quiz ends. However, the user can choose to play again, and the app will present 10 new, unique questions, ensuring no repetition from the previous quiz session.
+
+The app fetches random questions using an API key, and leverages React Hooks to efficiently manage state and handle user interactions.
