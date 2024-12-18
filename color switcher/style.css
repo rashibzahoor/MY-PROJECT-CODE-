@@ -1,0 +1,20 @@
+
+.button {
+    width: 100px;
+    height: 100px;
+    border: solid black 2px;
+    display: inline-block;
+  }
+
+  #gray {
+    background-color: gray;
+  }
+  #blue {
+    background-color: blue;
+  }
+  #white {
+    background-color: white;
+  }
+  #red {
+    background-color: red;
+  }
