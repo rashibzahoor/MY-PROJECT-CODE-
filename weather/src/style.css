@@ -1,0 +1,22 @@
+.box {
+    margin: 0;
+    overflow: hidden;
+
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("C:\Users\LOG IN\Pictures\windyyy.jpeg");
+
+    background-size: cover;
+    background-position: center;
+    font-style: italic;
+    color: white;
+
+
+
+}
+.inputField{
+margin-right: 10px;
+border-radius: 20px;
+}
