@@ -1,0 +1,121 @@
+<!-- transfer.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Transfer</title>
+    <style>
+        /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f7f7f7; /* Light background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+/* Form Container */
+form {
+    background: white;
+    padding: 40px 50px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 450px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #4CAF50;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Label Styling */
+label {
+    font-size: 1.1rem;
+    color: #333;
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* Input Fields Styling */
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px; /* More space between inputs */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+/* Button Styling */
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: translateY(-3px); /* Button lift effect */
+}
+
+button:active {
+    background-color: #388e3c;
+    transform: translateY(1px); /* Pressed button effect */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    form {
+        padding: 25px 30px;
+    }
+
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 12px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <h1>Transfer Money</h1>
+    <form method="POST">
+        <label for="sender_account">Sender Account Number:</label>
+        <input type="text" name="sender_account" required><br><br>
+        <label for="receiver_account">Receiver Account Number:</label>
+        <input type="text" name="receiver_account" required><br><br>
+        <label for="amount">Amount to Transfer:</label>
+        <input type="number" step="0.01" name="amount" required><br><br>
+        <button type="submit">Transfer</button>
+    </form>
+</body>
+</html>
