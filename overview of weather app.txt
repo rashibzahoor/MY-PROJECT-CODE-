@@ -1,0 +1,12 @@
+In this JavaScript code, we are building a simple weather application using the OpenWeather API. Here's a brief explanation of how it works:
+
+Event Listener Setup: The code waits for the DOM to be fully loaded before attaching event listeners. The key event listener listens for a click on the "Get Weather" button.
+
+Fetching Weather Data: When the button is clicked, the code fetches weather data for the city entered by the user in the input field. It uses the OpenWeather API to get the current weather information based on the city name.
+
+Error Handling: If the city is not found or there’s an issue with the API call, the code throws an error. The error is caught and an error message is displayed to the user.
+
+Displaying Weather Information: If the API call is successful, the weather data (city name, temperature, and description) is displayed on the webpage. If there’s an error, an error message is shown.
+
+API Integration: The weather data is fetched from the OpenWeather API using an API key, which is ideally stored as an environment variable for security purposes.
+
