@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Summary</title>
+    <style>
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #4e9e4f, #005249); /* Gradient background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    color: #fff;
+}
+
+/* Main Container */
+.container {
+    background: rgba(255, 255, 255, 0.9); /* Light frosted glass effect with better opacity */
+    border-radius: 15px;
+    padding: 40px 50px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 480px;
+    transition: all 0.3s ease-in-out;
+    backdrop-filter: blur(12px); /* Frosted effect with more blur */
+    color: #333; /* Dark text for visibility */
+}
+
+/* Hover Effect on Container */
+.container:hover {
+    transform: translateY(-10px); /* Slight upward movement on hover */
+}
+
+/* Header Styling */
+h1 {
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: linear-gradient(90deg, #4e9e4f, #005249);
+    color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Added text shadow for visibility */
+    transition: all 0.3s ease;
+}
+
+/* Account Info Section */
+.account-info {
+    font-size: 1.2rem;
+    color: #333; /* Ensure dark color for text */
+    margin-bottom: 30px;
+    text-align: left;
+    line-height: 1.6;
+}
+
+.account-info p {
+    margin-bottom: 18px;
+    font-size: 1.1rem;
+}
+
+.account-info strong {
+    font-weight: 600;
+    color: #4e9e4f; /* Green color for labels */
+}
+
+/* Links (Buttons) */
+.links {
+    margin-top: 30px;
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 30px;
+    background: #4e9e4f; /* Green button */
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 50px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    margin-bottom: 12px;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+}
+
+.button:hover {
+    background: #005249; /* Darker green on hover */
+    transform: translateY(-5px); /* Lift effect */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.button:active {
+    background: #003a33; /* Even darker green when pressed */
+    transform: translateY(2px); /* Button press effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 30px 40px;
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .button {
+        font-size: 1rem;
+        padding: 12px 25px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <h1>Account Summary</h1>
+
+    <p>Account Holder: {{ account_info.account_holder }}</p>
+    <p>Balance: ${{ account_info.balance }}</p>
+    <p>Account Type: {{ account_info.account_type }}</p>
+    
+    <a href="/transactions/{{ account_info.account_holder }}">View Transactions</a><br>
+    <a href="/home">Go to Home</a>
+</body>
+</html>
